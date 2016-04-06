@@ -5,9 +5,7 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
-/**
- * Created by eigenaar on 6-4-2016.
- */
+
 public class Diefstal extends Application {
     final static String Centrum         = "Rotterdam Centrum";
     final static String Charlois        = "Charlois";
@@ -20,9 +18,6 @@ public class Diefstal extends Application {
     final static String Noord           = "Noord";
     final static String Overschie       = "Overschie";
     final static String PrinsALexander  = "Prins Alexander";
-
-
-
 
     @Override public void start(Stage stage) {
         stage.setTitle("Bar Chart Sample");
@@ -47,24 +42,15 @@ public class Diefstal extends Application {
         series1.getData().add(new XYChart.Data(Overschie, 185));
         series1.getData().add(new XYChart.Data(PrinsALexander, 1395));
 
-
         XYChart.Series series2 = new XYChart.Series();
         series2.setName("Fietsrommels");
         series2.getData().add(new XYChart.Data(Centrum, 25));
         series2.getData().add(new XYChart.Data(Charlois, 20));
         series2.getData().add(new XYChart.Data(Delfshaven, 10));
 
-
-
-
-
         Scene scene  = new Scene(bc,800,600);
         bc.getData().addAll(series1,series2);
         stage.setScene(scene);
         stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
