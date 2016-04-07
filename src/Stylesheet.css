@@ -1,0 +1,19 @@
+.chart{
+    -fx-bar-gap: 5;
+    -fx-category-gap: 10;
+    -fx-border-color: #e6e6e6;
+    -fx-border-width: 5px;
+}
+
+/*bar colors*/
+.default-color0.chart-bar { -fx-bar-fill: #ff751a; }
+.default-color1.chart-bar { -fx-bar-fill: #47d147; }
+
+
+
+
+
+
+
+
+
