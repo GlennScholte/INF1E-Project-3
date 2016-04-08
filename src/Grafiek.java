@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Grafiek extends Application {
+public class Grafiek {
     final static String Centrum         = "Rotterdam Centrum";
     final static String Charlois        = "Charlois";
     final static String Delfshaven      = "Delfshaven";
@@ -20,64 +20,53 @@ public class Grafiek extends Application {
     final static String IJselmonde      = "IJselmonde";
     final static String Noord           = "Noord";
     final static String Overschie       = "Overschie";
-    final static String PrinsALexander  = "Prins Alexander";
+    final static String PrinsAlexander  = "Prins Alexander";
 
-    Label testLabel;
-    Button testButton;
-    public Stage stage;
+    public static void display(){
 
-    @Override public void start(Stage showedStage) throws Exception {
-        stage = showedStage;
-        showedStage.setTitle("");
+        Stage window = new Stage();
+        window.setTitle("");
 
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
-        final BarChart<String,Number> bc = new BarChart<String,Number>(xAxis,yAxis);
-        bc.setTitle("Fietsendiefstal en Fietstrommels in Rotterdam");
+        final BarChart<String, Number> bc = new BarChart<String, Number>(xAxis, yAxis);
+        bc.setTitle("Fietsdiefstal en Fietsboxen in Rotterdam");
         xAxis.setLabel("Buurt");
         yAxis.setLabel("Aantal");
 
-        XYChart.Series series1 = new XYChart.Series();
-        series1.setName("Fietsdiefstal");
-        series1.getData().add(new XYChart.Data(Centrum, 88));
-        series1.getData().add(new XYChart.Data(Charlois, 99));
-        series1.getData().add(new XYChart.Data(Delfshaven, 948));
-        series1.getData().add(new XYChart.Data(Feijenoord, 697));
-        series1.getData().add(new XYChart.Data(Hillegersberg, 0));
-        series1.getData().add(new XYChart.Data(HoekVanHolland, 0));
-        series1.getData().add(new XYChart.Data(Hoogvliet, 0));
-        series1.getData().add(new XYChart.Data(IJselmonde, 358));
-        series1.getData().add(new XYChart.Data(Noord, 1259));
-        series1.getData().add(new XYChart.Data(Overschie, 185));
-        series1.getData().add(new XYChart.Data(PrinsALexander, 1395));
+        XYChart.Series diefstal = new XYChart.Series();
+        diefstal.setName("Diefstal");
+        diefstal.getData().add(new XYChart.Data(Centrum, 110));
+        diefstal.getData().add(new XYChart.Data(Charlois, 251.34));
+        diefstal.getData().add(new XYChart.Data(Delfshaven, 401.34));
+//        diefstal.getData().add(new XYChart.Data(Feijenoord, 201.34));
+//        diefstal.getData().add(new XYChart.Data(Hillegersberg, 241.34));
+//        diefstal.getData().add(new XYChart.Data(HoekVanHolland, 251.34));
+//        diefstal.getData().add(new XYChart.Data(Hoogvliet, 256.34));
+//        diefstal.getData().add(new XYChart.Data(IJselmonde, 254));
+//        diefstal.getData().add(new XYChart.Data(Noord, 144));
+//        diefstal.getData().add(new XYChart.Data(Overschie, 175.34));
+//        diefstal.getData().add(new XYChart.Data(PrinsAlexander, 231.34));
 
-        XYChart.Series series2 = new XYChart.Series();
-        series2.setName("Fietstrommels");
-        series2.getData().add(new XYChart.Data(Centrum, 253));
-        series2.getData().add(new XYChart.Data(Charlois, 49));
-        series2.getData().add(new XYChart.Data(Delfshaven, 448));
-        series2.getData().add(new XYChart.Data(Feijenoord, 497));
-        series2.getData().add(new XYChart.Data(Hillegersberg, 410));
-        series2.getData().add(new XYChart.Data(HoekVanHolland, 10));
-        series2.getData().add(new XYChart.Data(Hoogvliet, 70));
-        series2.getData().add(new XYChart.Data(IJselmonde, 558));
-        series2.getData().add(new XYChart.Data(Noord, 559));
-        series2.getData().add(new XYChart.Data(Overschie, 485));
-        series2.getData().add(new XYChart.Data(PrinsALexander, 405));
+        XYChart.Series fietsboxen = new XYChart.Series();
+        fietsboxen.setName("Fietsboxen");
+        fietsboxen.getData().add(new XYChart.Data(Centrum, 321));
+        fietsboxen.getData().add(new XYChart.Data(Charlois, 123));
+        fietsboxen.getData().add(new XYChart.Data(Delfshaven, 122));
+//        fietsboxen.getData().add(new XYChart.Data(Feijenoord, 125));
+//        fietsboxen.getData().add(new XYChart.Data(Hillegersberg, 129));
+//        fietsboxen.getData().add(new XYChart.Data(HoekVanHolland, 163));
+//        fietsboxen.getData().add(new XYChart.Data(Hoogvliet, 265));
+//        fietsboxen.getData().add(new XYChart.Data(IJselmonde, 264));
+//        fietsboxen.getData().add(new XYChart.Data(Noord, 241));
+//        fietsboxen.getData().add(new XYChart.Data(Overschie, 211));
+//        fietsboxen.getData().add(new XYChart.Data(PrinsAlexander, 192));
 
-
-        bc.getData().addAll(series1,series2);
-        Scene graphScene  = new Scene(bc,1500,1000);
-        graphScene.getStylesheets().add("Stylesheet.css");
-
-        Label testLabel = new Label("Test123Kaas");
-        Button testButton = new Button("Klik hier");
-        VBox testLayout = new VBox(20);
-        testLayout.getChildren().addAll(testLabel, testButton);
-        testButton.setOnAction(e -> showedStage.setScene(graphScene));
-        Scene mainScene = new Scene(testLayout, 1500,1000);
-
-        showedStage.setScene(mainScene);
-        showedStage.show();
+        bc.getData().addAll(diefstal, fietsboxen);
+        Scene scene = new Scene(bc, 1500, 1000);
+        window.setScene(scene);
+        window.show();
+        }
     }
-}
+
+
