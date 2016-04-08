@@ -10,9 +10,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Hoofdmenu extends Application{
+import java.util.ArrayList;
+import java.util.List;
 
+public class Hoofdmenu extends Application{
     public Stage stage;
+
+    static List checked = new ArrayList();
 
     @Override public void start(Stage showedStage) throws Exception {
         stage = showedStage;
@@ -27,9 +31,8 @@ public class Hoofdmenu extends Application{
         grafiekButton.setOnAction(e -> {
             checkboxHandler(box1, box2, box3);
             Grafiek.display();
+            System.out.println(checked);
         });
-
-
 
         VBox testLayout = new VBox(20);
         testLayout.getChildren().addAll(grafiekButton, box1, box2, box3);
@@ -44,12 +47,17 @@ public class Hoofdmenu extends Application{
 
         if (box1.isSelected()) {
             testMessage += "Centrum\n";
+            checked.add("Centrum");
         }
         if (box2.isSelected()) {
             testMessage += "Charlois\n";
         }
         if (box3.isSelected()) {
             testMessage += "Delfshaven\n";
+        }
+        if (checked.contains("Centrum")){
+            System.out.println("Add deze grafiek nu aan de volgende scene.");
+
         }
         System.out.println(testMessage);
     }

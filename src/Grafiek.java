@@ -9,6 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
+
 public class Grafiek {
     final static String Centrum         = "Rotterdam Centrum";
     final static String Charlois        = "Charlois";
