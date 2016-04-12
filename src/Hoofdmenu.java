@@ -38,7 +38,7 @@ public class Hoofdmenu extends Application{
         box1.setTranslateX(200);
         box1.setTranslateY(400);
 
-        Button grafiekButton = new Button("Klik hiert");
+        Button grafiekButton = new Button("Kliygik hiert");
         grafiekButton.setOnAction(e -> {
             checkboxHandler(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
             Grafiek.display();
