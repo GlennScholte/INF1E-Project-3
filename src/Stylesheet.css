@@ -26,7 +26,7 @@
 }
 .root{
     -fx-spacing: 20;
-    -fx-background-image: url("afbeeldingen/backgroundgrey.jpg");
+    -fx-background-image: url("afbeeldingen/backgroundgrey2.jpg");
     -fx-text-fill: #ffffff;
     -fx-font-style: oblique ;
     -fx-font-size: 20px;
@@ -51,8 +51,10 @@
 #fancytext {
     -fx-font: 80px Tahoma;
     -fx-fill: black;
-    -fx-stroke: whitesmoke;
-    -fx-stroke-width: 1;
+    -fx-stroke: rgba(0, 0, 0, 0.93);
+    -fx-stroke-width: 10;
+
+    -fx-font-family: fantasy;
 
 }
 
