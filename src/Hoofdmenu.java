@@ -82,7 +82,6 @@ public class Hoofdmenu extends Application{
         Button grafiekButton = new Button("show chart");
         grafiekButton.setTranslateX(500);
         grafiekButton.setTranslateY(200);
-
         grafiekButton.setOnAction(e -> {
             checkboxHandler(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
             Grafiek.display();
@@ -92,10 +91,8 @@ public class Hoofdmenu extends Application{
         testLayout.getChildren().addAll(text,grafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
 
         Scene mainScene = new Scene(testLayout, 1200,700);
-
+        mainScene.getStylesheets().add("StylesheetHoofdmenu.css");
         showedStage.setScene(mainScene);
-
-        mainScene.getStylesheets().add("Stylesheet.css");
         showedStage.show();
 
     }

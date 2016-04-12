@@ -7,11 +7,6 @@
 
 }
 
-/*bar colors*/
-.default-color0.chart-bar { -fx-bar-fill: #ff751a; }
-.default-color1.chart-bar { -fx-bar-fill: #47d147; }
-
-
 .button {
     -fx-font-family: "Arial";
     -fx-font-size: 30px;
