@@ -42,6 +42,8 @@ public class Grafiek {
         diefstal.getData().add(new XYChart.Data(Centrum, 110));
         diefstal.getData().add(new XYChart.Data(Charlois, 251.34));
         diefstal.getData().add(new XYChart.Data(Delfshaven, 401.34));
+
+
 //        diefstal.getData().add(new XYChart.Data(Feijenoord, 201.34));
 //        diefstal.getData().add(new XYChart.Data(Hillegersberg, 241.34));
 //        diefstal.getData().add(new XYChart.Data(HoekVanHolland, 251.34));
@@ -56,6 +58,8 @@ public class Grafiek {
         fietsboxen.getData().add(new XYChart.Data(Centrum, 321));
         fietsboxen.getData().add(new XYChart.Data(Charlois, 123));
         fietsboxen.getData().add(new XYChart.Data(Delfshaven, 122));
+
+
 //        fietsboxen.getData().add(new XYChart.Data(Feijenoord, 125));
 //        fietsboxen.getData().add(new XYChart.Data(Hillegersberg, 129));
 //        fietsboxen.getData().add(new XYChart.Data(HoekVanHolland, 163));
