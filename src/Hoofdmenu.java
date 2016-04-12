@@ -54,7 +54,7 @@ public class Hoofdmenu extends Application{
         CheckBox box13 = new CheckBox("Hilegersberg");
         CheckBox box14 = new CheckBox("Rozenburg");
 
-
+    //jnihjni
 
         box1.setSelected(true);
 
