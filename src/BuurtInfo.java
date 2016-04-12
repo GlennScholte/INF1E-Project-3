@@ -8,6 +8,7 @@ public class BuurtInfo {
 
     static BuurtInfo RotterdamCentrum =         new BuurtInfo("Rotterdam Centrum", 18, 18);
     static BuurtInfo Charlois =                 new BuurtInfo("Charlois", 15, 14);
+    static BuurtInfo Pernis =                   new BuurtInfo("Pernis", 11, 9);
     static BuurtInfo Delfshaven =               new BuurtInfo("Delfshaven", 11, 10);
     static BuurtInfo Feijenoord =               new BuurtInfo("Feijenoord", 12, 13);
     static BuurtInfo HillegersbergSchiebroek =  new BuurtInfo("Hillegersberg / Schiebroek", 10, 12);
@@ -17,7 +18,6 @@ public class BuurtInfo {
     static BuurtInfo KralingenCrooswijk =       new BuurtInfo("Kralingen / Crooswijk", 14, 18);
     static BuurtInfo Noord =                    new BuurtInfo("Noord", 10, 14);
     static BuurtInfo Overschie =                new BuurtInfo("Overschie", 15, 17);
-    static BuurtInfo Pernis =                   new BuurtInfo("Pernis", 11, 9);
     static BuurtInfo PrinsAlexander =           new BuurtInfo("Prins Alexander", 17, 12);
     static BuurtInfo Rozenburg =                new BuurtInfo("Rozenburg", 13, 13);
 
