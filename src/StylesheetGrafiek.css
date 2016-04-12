@@ -1,3 +1,30 @@
 /*bar colors*/
 .default-color0.chart-bar { -fx-bar-fill: #5DF380; }
 .default-color1.chart-bar { -fx-bar-fill: #1760CE; }
+
+.chart {
+    -fx-background-image: url("afbeeldingen/backgroundgrey3.jpg");
+
+}
+.chart-legend {
+    -fx-background-color:  transparent;
+    -fx-padding: 30px;
+}
+.chart-legend-item{
+    -fx-text-fill: #191970;
+}
+
+chart-plot-background {
+    -fx-background-color: #e2ecfe;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-alternative-row-fill {
+    -fx-fill: #99bcfd;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 2;
+}
