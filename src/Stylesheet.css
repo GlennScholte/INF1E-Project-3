@@ -3,7 +3,7 @@
     -fx-category-gap: 10;
     -fx-border-color: #e6e6e6;
     -fx-border-width: 5px;
-    -fx-background-image: url("backgroundgrey.jpg");
+    -fx-background-image: url("afbeeldingen/backgroundgrey.jpg");
 
 }
 
@@ -26,7 +26,7 @@
 }
 .root{
     -fx-spacing: 20;
-    -fx-background-image: url("backgroundgrey.jpg");
+    -fx-background-image: url("afbeeldingen/backgroundgrey.jpg");
     -fx-text-fill: #ffffff;
     -fx-font-style: oblique ;
     -fx-font-size: 20px;
