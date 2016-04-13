@@ -6,7 +6,7 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 public class Grafiek {
-    public static Hoofdmenu hoofdmenu;
+    public static GrafiekMenu grafiekmenu;
 
     public static void display(){
 
@@ -26,7 +26,7 @@ public class Grafiek {
         XYChart.Series fietsboxen = new XYChart.Series();
         fietsboxen.setName("Fietsboxen");
 
-        for (BuurtInfo buurt : hoofdmenu.selected) {
+        for (BuurtInfo buurt : grafiekmenu.selected) {
             diefstal.getData().add(new XYChart.Data(buurt.getNaam(), buurt.getAantalDiefstal()));
             fietsboxen.getData().add(new XYChart.Data(buurt.getNaam(), buurt.getAantalFietsboxen()));
         }
