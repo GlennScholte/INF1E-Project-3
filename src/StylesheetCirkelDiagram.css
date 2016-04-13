@@ -1,0 +1,8 @@
+/*bar colors*/
+.default-color0.chart-bar { -fx-bar-fill: #5DF380; }
+.default-color1.chart-bar { -fx-bar-fill: #1760CE; }
+
+.chart {
+    -fx-padding: -150px;
+}
+

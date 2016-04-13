@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class BuurtInfo {
     private String naam;
     private int aantalDiefstal;
@@ -47,4 +51,5 @@ public class BuurtInfo {
     public void setAantalDiefstal(int aantalDiefstal) {
         this.aantalDiefstal = aantalDiefstal;
     }
+
 }
