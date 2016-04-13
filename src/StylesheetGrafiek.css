@@ -4,10 +4,11 @@
 
 .chart {
     -fx-background-image: url("afbeeldingen/backgroundgrey3.jpg");
+    -fx-font-size: 20px;
 
 }
 .chart-legend {
-    -fx-background-color:  transparent;
+    -fx-background-color:  linear-gradient(grey,white);
     -fx-padding: 30px;
 }
 .chart-legend-item{
@@ -18,13 +19,13 @@ chart-plot-background {
     -fx-background-color: #e2ecfe;
 }
 .chart-vertical-grid-lines {
-    -fx-stroke: #3278fa;
+    -fx-stroke: black;
 }
 .chart-horizontal-grid-lines {
-    -fx-stroke: #3278fa;
+    -fx-stroke: black;
 }
 .chart-alternative-row-fill {
-    -fx-fill: #99bcfd;
-    -fx-stroke: transparent;
+    -fx-fill:linear-gradient(red,green);
+    -fx-stroke: black;
     -fx-stroke-width: 2;
 }
