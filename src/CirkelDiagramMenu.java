@@ -29,6 +29,7 @@ public class CirkelDiagramMenu {
 
         Scene mainScene = new Scene(diagramMenuLayout, 1200, 700);
         mainScene.getStylesheets().add("StylesheetHoofdmenu.css");
+
         window.setScene(mainScene);
         window.show();
     }

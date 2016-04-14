@@ -17,8 +17,8 @@ public class GrafiekMenu{
 
         //text
         Text text = new Text("welcome to SaveByc.");
-        text.setTranslateX(200);
-        text.setTranslateY(200);
+        text.setTranslateX(170);
+        text.setTranslateY(180);
         text.setId("fancytext");
 
         CheckBox box1   = new CheckBox(BuurtInfo.Charlois.getNaam());
