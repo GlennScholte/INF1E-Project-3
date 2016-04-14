@@ -21,7 +21,7 @@ public class Grafiek {
         yAxis.setLabel("Aantal");
 
         XYChart.Series diefstal = new XYChart.Series();
-        diefstal.setName("Diefstal");
+        diefstal.setName("Diefstal x10");
 
         XYChart.Series fietsboxen = new XYChart.Series();
         fietsboxen.setName("Fietsboxen");
