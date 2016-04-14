@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javax.swing.text.StyledEditorKit;
+import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,12 +32,12 @@ public class Hoofdmenu extends Application {
         showedStage.setTitle("");
 
         Label welcomeLabel = new Label("Ik wil graag zien:");
-        welcomeLabel.setTranslateX(20);
-        welcomeLabel.setTranslateY(360);
+        welcomeLabel.setTranslateX(40);
+        welcomeLabel.setTranslateY(350);
 
         Button grafiekButton = new Button("Grafiek");
         grafiekButton.setTranslateX(300);
-        grafiekButton.setTranslateY(325);
+        grafiekButton.setTranslateY(275);
         grafiekButton.setOnAction(e -> {GrafiekMenu.display();
         });
 
@@ -49,15 +50,15 @@ public class Hoofdmenu extends Application {
         Text text3 = new Text("this app will show you all the save and unsave places  where you can put your bycicle.");
         text3.setFont(Font.font ("Arial Black", FontWeight.BOLD, 20));
         text3.setFill(Color.WHITESMOKE);
-        text3.setTranslateX(5);
+        text3.setTranslateX(70);
         text3.setTranslateY(200);
 
 
 
 
         Button pieButton = new Button("Cirkel Diagram");
-        pieButton.setTranslateX(650);
-        pieButton.setTranslateY(250);
+        pieButton.setTranslateX(600);
+        pieButton.setTranslateY(200);
         pieButton.setOnAction(e -> {CirkelDiagramMenu.display();
         });
 
@@ -74,5 +75,11 @@ public class Hoofdmenu extends Application {
         showedStage.setScene(mainScene);
         showedStage.show();
     }
+
+
+
+
+
+
 
 }

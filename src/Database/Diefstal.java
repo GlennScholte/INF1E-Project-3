@@ -10,7 +10,7 @@ public class Diefstal {
     public static int getNumber(String SQL) {
         int res = 0;
         try {
-            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "rainbowbrony1");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "28061991");
             Statement stmnt = con.createStatement();
             ResultSet rs = stmnt.executeQuery(SQL);
             while (rs.next()) {
