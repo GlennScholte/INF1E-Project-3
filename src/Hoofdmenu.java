@@ -3,6 +3,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -22,26 +23,34 @@ public class Hoofdmenu extends Application {
         showedStage.setTitle("");
 
         Label welcomeLabel = new Label("Ik wil graag zien:");
+        welcomeLabel.setTranslateX(20);
+        welcomeLabel.setTranslateY(360);
 
         Button grafiekButton = new Button("Grafiek");
         grafiekButton.setTranslateX(300);
-        grafiekButton.setTranslateY(200);
-        grafiekButton.setOnAction(e -> {
-            GrafiekMenu.display();
+        grafiekButton.setTranslateY(325);
+        grafiekButton.setOnAction(e -> {GrafiekMenu.display();
         });
 
+        Text text = new Text("Welcome to SaveByc.");
+        text.setTranslateX(170);
+        text.setTranslateY(220);
+        text.setId("fancytext");
+
+
+
         Button pieButton = new Button("Cirkel Diagram");
-        pieButton.setTranslateX(700);
-        pieButton.setTranslateY(200);
-        pieButton.setOnAction(e -> {
-            CirkelDiagramMenu.display();
+        pieButton.setTranslateX(650);
+        pieButton.setTranslateY(250);
+        pieButton.setOnAction(e -> {CirkelDiagramMenu.display();
         });
 
         VBox testLayout = new VBox(20);
 
-        testLayout.getChildren().addAll(welcomeLabel, grafiekButton, pieButton);
+        testLayout.getChildren().addAll(text, welcomeLabel, grafiekButton, pieButton);
 
         Scene mainScene = new Scene(testLayout, 1200,700);
+        mainScene.getStylesheets().add("Stylesheet.css");
         showedStage.setScene(mainScene);
         showedStage.show();
     }
