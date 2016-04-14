@@ -5,11 +5,13 @@
 .chart {
     -fx-background-image: url("afbeeldingen/backgroundgrey3.jpg");
     -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
 
 }
 .chart-legend {
     -fx-background-color:  linear-gradient(grey,white);
-    -fx-padding: 30px;
+    -fx-padding: 10px;
 }
 .chart-legend-item{
     -fx-text-fill: #191970;
@@ -28,4 +30,12 @@ chart-plot-background {
     -fx-fill:linear-gradient(red,green);
     -fx-stroke: black;
     -fx-stroke-width: 2;
+}
+.root {
+    -fx-spacing: 20;
+    -fx-text-fill: #ffffff;
+    -fx-font-style: oblique;
+    -fx-font-size: 20px;
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
 }
