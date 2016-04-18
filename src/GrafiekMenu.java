@@ -16,10 +16,16 @@ public class GrafiekMenu{
         window.setTitle("");
 
         //text
-        Text text = new Text("welcome to SaveByc.");
-        text.setTranslateX(170);
-        text.setTranslateY(180);
-        text.setId("fancytext");
+        //Text text = new Text("welcome to SaveByc.");
+
+        Text text2 = new Text("this bar chart is a chart that presents grouped data of places in Rotterdam, where you can place your bike safely.\n It also shows the statistics of bicycle crime in each district of Rotterdam.\n");
+        text2.setTranslateX(10);
+        text2.setTranslateY(220);
+        text2.setId("fancytext");
+
+
+
+
 
         CheckBox box1   = new CheckBox(BuurtInfo.Charlois.getNaam());
         CheckBox box2   = new CheckBox(BuurtInfo.Delfshaven.getNaam());
@@ -84,7 +90,7 @@ public class GrafiekMenu{
         });
 
         VBox grafiekMenuLayout = new VBox(20);
-        grafiekMenuLayout.getChildren().addAll(text, showGrafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
+        grafiekMenuLayout.getChildren().addAll(text2, showGrafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
 
         Scene mainScene = new Scene(grafiekMenuLayout, 1200,700);
         mainScene.getStylesheets().add("StylesheetHoofdmenu.css");

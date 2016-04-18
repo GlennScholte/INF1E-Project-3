@@ -31,36 +31,36 @@ public class Hoofdmenu extends Application {
         stage = showedStage;
         showedStage.setTitle("");
 
-        Label welcomeLabel = new Label("Ik wil graag zien:");
-        welcomeLabel.setTranslateX(40);
-        welcomeLabel.setTranslateY(350);
+
 
         Button grafiekButton = new Button("Grafiek");
         grafiekButton.setTranslateX(300);
-        grafiekButton.setTranslateY(275);
+        grafiekButton.setTranslateY(240);
         grafiekButton.setOnAction(e -> {GrafiekMenu.display();
         });
 
-        Text text = new Text("Welcome to SaveByc.");
-        text.setTranslateX(160);
-        text.setTranslateY(220);
+        Button pieButton = new Button("Cirkel Diagram");
+        pieButton.setTranslateX(600);
+        pieButton.setTranslateY(165);
+        pieButton.setOnAction(e -> {CirkelDiagramMenu.display();
+        });
+
+        Text text = new Text("Welcome");
+        text.setTranslateX(340);
+        text.setTranslateY(210);
         text.setId("fancytext");
 
 
-        Text text3 = new Text("this app will show you all the save and unsave places  where you can put your bycicle.");
-        text3.setFont(Font.font ("Arial Black", FontWeight.BOLD, 20));
+        Text text3 = new Text("Rotterdam is a city that actively promotes cycling, so what better way of getting around than by bike. Unfortunately,\n bicycle theft is a real issue in Rotterdam. So use a guarded bike parking facility(fietstrommels) when possible.\n"+"There are several of them in several places of Rotterdam. We will show you all the save and unsave places,\n where your bicycle can be placed and also the statistics of bicycle theft in each area in Rotterdam");
+        text3.setFont(Font.font ("Arial Black", FontWeight.BOLD, 15));
         text3.setFill(Color.WHITESMOKE);
-        text3.setTranslateX(70);
-        text3.setTranslateY(200);
+        text3.setTranslateX(80);
+        text3.setTranslateY(230);
 
 
 
 
-        Button pieButton = new Button("Cirkel Diagram");
-        pieButton.setTranslateX(600);
-        pieButton.setTranslateY(200);
-        pieButton.setOnAction(e -> {CirkelDiagramMenu.display();
-        });
+
 
 
 
@@ -68,7 +68,7 @@ public class Hoofdmenu extends Application {
 
         VBox testLayout = new VBox(20);
 
-        testLayout.getChildren().addAll(text,text3, welcomeLabel, grafiekButton, pieButton);
+        testLayout.getChildren().addAll(text,text3, grafiekButton, pieButton);
 
         Scene mainScene = new Scene(testLayout, 1200,700);
         mainScene.getStylesheets().add("Stylesheet.css");

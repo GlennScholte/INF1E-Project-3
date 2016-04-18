@@ -24,10 +24,10 @@
 }
 
 #fancytext {
-    -fx-font: 100px Tahoma;
-    -fx-fill: linear-gradient(#626170, #ffffff);
-    -fx-stroke: rgba(0, 0, 0, 0.93);
-    -fx-stroke-width: 10;
+    -fx-font: 120px Tahoma;
+    -fx-fill: linear-gradient(#000000, #ffffff);
+    -fx-stroke: rgba(0, 0, 0, 0.20);
+    -fx-stroke-width: 20;
 
     -fx-font-family: fantasy;
 
