@@ -2,25 +2,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import Database.Diefstal;
+import Database.Fietstrommel;
+
 public class BuurtInfo {
     private String naam;
     private int aantalDiefstal;
     private int aantalFietsboxen;
 
-    static BuurtInfo RotterdamCentrum =         new BuurtInfo("Rotterdam Centrum", 18, 3);
-    static BuurtInfo Charlois =                 new BuurtInfo("Charlois", 15, 14);
-    static BuurtInfo Pernis =                   new BuurtInfo("Pernis", 11, 19);
-    static BuurtInfo Delfshaven =               new BuurtInfo("Delfshaven", 11, 10);
-    static BuurtInfo Feijenoord =               new BuurtInfo("Feijenoord", 12, 13);
-    static BuurtInfo HillegersbergSchiebroek =  new BuurtInfo("Hillegersberg / Schiebroek", 10, 12);
-    static BuurtInfo HoekVanHolland =           new BuurtInfo("Hoek van Holland", 11, 20);
-    static BuurtInfo Hoogvliet =                new BuurtInfo("Hoogvliet", 20, 14);
-    static BuurtInfo IJsselmonde =              new BuurtInfo("IJsselmonde", 19, 10);
-    static BuurtInfo KralingenCrooswijk =       new BuurtInfo("Kralingen / Crooswijk", 14, 18);
-    static BuurtInfo Noord =                    new BuurtInfo("Noord", 10, 64);
-    static BuurtInfo Overschie =                new BuurtInfo("Overschie", 15, 27);
-    static BuurtInfo PrinsAlexander =           new BuurtInfo("Prins Alexander", 17, 12);
-    static BuurtInfo Rozenburg =                new BuurtInfo("Rozenburg", 13, 13);
+    static BuurtInfo RotterdamCentrum =         new BuurtInfo("Rotterdam Centrum", Diefstal.getCentrum()/10, Fietstrommel.getCentrum());
+    static BuurtInfo Charlois =                 new BuurtInfo("Charlois", Diefstal.getCharlois()/10, Fietstrommel.getCharlois());
+    static BuurtInfo Pernis =                   new BuurtInfo("Pernis", Diefstal.getPernis()/10, Fietstrommel.getPernis());
+    static BuurtInfo Delfshaven =               new BuurtInfo("Delfshaven", Diefstal.getDelfshaven()/10, Fietstrommel.getDelfshaven());
+    static BuurtInfo Feijenoord =               new BuurtInfo("Feijenoord", Diefstal.getFeijenoord()/10, Fietstrommel.getFeijenoord());
+    static BuurtInfo HillegersbergSchiebroek =  new BuurtInfo("Hillegersberg / Schiebroek", Diefstal.getHilSchie()/10, Fietstrommel.getHilSchie());
+    static BuurtInfo HoekVanHolland =           new BuurtInfo("Hoek van Holland", Diefstal.getHoekvHolland()/10, Fietstrommel.getHoekvHolland());
+    static BuurtInfo Hoogvliet =                new BuurtInfo("Hoogvliet", Diefstal.getHoogvliet()/10, Fietstrommel.getHoogvliet());
+    static BuurtInfo IJsselmonde =              new BuurtInfo("IJsselmonde", Diefstal.getIjsselmonde()/10, Fietstrommel.getIjsselmonde());
+    static BuurtInfo KralingenCrooswijk =       new BuurtInfo("Kralingen / Crooswijk", Diefstal.getKralCroos()/10, Fietstrommel.getKralCroos());
+    static BuurtInfo Noord =                    new BuurtInfo("Noord", Diefstal.getNoord()/10, Fietstrommel.getNoord());
+    static BuurtInfo Overschie =                new BuurtInfo("Overschie", Diefstal.getOverschie()/10, Fietstrommel.getOverschie());
+    static BuurtInfo PrinsAlexander =           new BuurtInfo("Prins Alexander", Diefstal.getPrinsalex()/10, Fietstrommel.getPrinsalex());
+    static BuurtInfo Rozenburg =                new BuurtInfo("Rozenburg", Diefstal.getRozenburg()/10, Fietstrommel.getRozenburg());
 
     public BuurtInfo(String naam, int aantalDiefstal, int aantalFietsboxen){
         this.naam = naam;
