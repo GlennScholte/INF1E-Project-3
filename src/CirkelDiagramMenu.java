@@ -1,6 +1,5 @@
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -14,13 +13,13 @@ public class CirkelDiagramMenu {
         showGrafiekButton.setTranslateX(400);
         showGrafiekButton.setTranslateY(200);
         showGrafiekButton.setOnAction(e -> {
-            CirkelDiagramDiefstal.display();
+            //CirkelDiagramDiefstal.display();
         });
 
-        Button showDiagramButton = new Button("show diagram");
-        showGrafiekButton.setTranslateX(600);
-        showGrafiekButton.setTranslateY(200);
-        showGrafiekButton.setOnAction(e -> {
+        Button showDiagramButton = new Button("show fietsboxen");
+        showDiagramButton.setTranslateX(600);
+        showDiagramButton.setTranslateY(200);
+        showDiagramButton.setOnAction(e -> {
             CirkelDiagramFietsboxen.display();
         });
 

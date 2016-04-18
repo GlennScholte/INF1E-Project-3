@@ -33,7 +33,7 @@ public class Grafiek {
 
         bc.getData().addAll(diefstal, fietsboxen);
         Scene scene = new Scene(bc, 1200,700);
-        scene.getStylesheets().add("StylesheetGrafiek.css");
+        scene.getStylesheets().add("stylesheets/StylesheetGrafiek.css");
         window.setScene(scene);
         window.show();
         }

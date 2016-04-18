@@ -1,31 +1,16 @@
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GrafiekMenu{
     public static List<BuurtInfo> selected = new ArrayList();
+    public static Scene window;
 
-    public static void display(){
-        Stage window = new Stage();
-        window.setTitle("");
-
-        //text
-        //Text text = new Text("welcome to SaveByc.");
-
-        Text text2 = new Text("this bar chart is a chart that presents grouped data of places in Rotterdam, where you can place your bike safely.\n It also shows the statistics of bicycle crime in each district of Rotterdam.\n");
-        text2.setTranslateX(10);
-        text2.setTranslateY(220);
-        text2.setId("fancytext");
-
-
-
-
+    public void start(Stage primaryStage) {
 
         CheckBox box1   = new CheckBox(BuurtInfo.Charlois.getNaam());
         CheckBox box2   = new CheckBox(BuurtInfo.Delfshaven.getNaam());
@@ -89,58 +74,66 @@ public class GrafiekMenu{
             Grafiek.display();
         });
 
-        VBox grafiekMenuLayout = new VBox(20);
-        grafiekMenuLayout.getChildren().addAll(text2, showGrafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
+        StackPane grafiekMenuLayout = new StackPane();
+        grafiekMenuLayout.getChildren().addAll(showGrafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
 
-        Scene mainScene = new Scene(grafiekMenuLayout, 1200,700);
-        mainScene.getStylesheets().add("StylesheetHoofdmenu.css");
-        window.setScene(mainScene);
-        window.show();
-
+        window = new Scene(grafiekMenuLayout, 1200,700);
+        window.getStylesheets().add("stylesheets/StylesheetHoofdmenu.css");
     }
 
     public static void checkboxHandler(CheckBox box1, CheckBox box2, CheckBox box3, CheckBox box4, CheckBox box5, CheckBox box6, CheckBox box7, CheckBox box8, CheckBox box9,CheckBox box10, CheckBox box11, CheckBox box12, CheckBox box13, CheckBox box14){
         if (box1.isSelected()) {
-            selected.add(BuurtInfo.Charlois);
+            GUI.selected.add(BuurtInfo.Charlois);
         }
+
         if (box2.isSelected()) {
-            selected.add(BuurtInfo.RotterdamCentrum);
+            GUI.selected.add(BuurtInfo.RotterdamCentrum);
         }
+
         if (box3.isSelected()) {
-            selected.add(BuurtInfo.Delfshaven);
+            GUI.selected.add(BuurtInfo.Delfshaven);
         }
+
         if (box4.isSelected()) {
-            selected.add(BuurtInfo.Feijenoord);
+            GUI.selected.add(BuurtInfo.Feijenoord);
         }
+
         if (box5.isSelected()) {
-            selected.add(BuurtInfo.HillegersbergSchiebroek);
+            GUI.selected.add(BuurtInfo.HillegersbergSchiebroek);
         }
+
         if (box6.isSelected()) {
-            selected.add(BuurtInfo.HoekVanHolland);
+            GUI.selected.add(BuurtInfo.HoekVanHolland);
         }
+
         if (box7.isSelected()) {
-            selected.add(BuurtInfo.Hoogvliet);
+            GUI.selected.add(BuurtInfo.Hoogvliet);
         }
+
         if (box8.isSelected()) {
-            selected.add(BuurtInfo.Rozenburg);
+            GUI.selected.add(BuurtInfo.Rozenburg);
         }
         if (box9.isSelected()) {
-            selected.add(BuurtInfo.IJsselmonde);
+            GUI.selected.add(BuurtInfo.IJsselmonde);
         }
         if (box10.isSelected()) {
-            selected.add(BuurtInfo.KralingenCrooswijk);
+            GUI.selected.add(BuurtInfo.KralingenCrooswijk);
         }
+
         if (box11.isSelected()) {
-            selected.add(BuurtInfo.Noord);
+            GUI.selected.add(BuurtInfo.Noord);
         }
+
         if (box12.isSelected()) {
-            selected.add(BuurtInfo.Overschie);
+            GUI.selected.add(BuurtInfo.Overschie);
         }
         if (box13.isSelected()) {
-            selected.add(BuurtInfo.PrinsAlexander);
+            GUI.selected.add(BuurtInfo.PrinsAlexander);
         }
+
         if (box14.isSelected()) {
-            selected.add(BuurtInfo.Pernis);
+            GUI.selected.add(BuurtInfo.Pernis);
         }
     }
+
 }
