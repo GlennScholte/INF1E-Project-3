@@ -1,8 +1,43 @@
 /*bar colors*/
-.default-color0.chart-bar { -fx-bar-fill: #5DF380; }
-.default-color1.chart-bar { -fx-bar-fill: #1760CE; }
+.default-color0.chart-pie { -fx-pie-color: #003366; }
+.default-color1.chart-pie { -fx-pie-color: #6666ff; }
+.default-color2.chart-pie { -fx-pie-color: #99ccff; }
+.default-color3.chart-pie { -fx-pie-color: #cc44cc; }
+.default-color4.chart-pie { -fx-pie-color: #ff80df; }
+.default-color5.chart-pie { -fx-pie-color: #990099; }
+.default-color6.chart-pie { -fx-pie-color: #ff9900; }
+.default-color7.chart-pie { -fx-pie-color: #009900; }
+.default-color8.chart-pie { -fx-pie-color: #cc0000; }
+.default-color9.chart-pie { -fx-pie-color: #00cc99; }
+.default-color10.chart-pie { -fx-pie-color: #ffff00; }
+.default-color11.chart-pie { -fx-pie-color: #660066; }
+.default-color12.chart-pie { -fx-pie-color: #ff0066; }
+.default-color13.chart-pie { -fx-pie-color: #00ff00; }
 
-.chart {
-    -fx-padding: -150px;
+.root{
+    -fx-spacing: 2;
+    -fx-background-color: #4F4F4F;
+    -fx-text-fill: #fff444;
+    -fx-font-size: 15px;
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
 }
 
+.button {
+    -fx-font-family: "Arial";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#e6e6e6, #ffffff);
+    -fx-font-style: oblique ;
+
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+    -fx-text-fill: #ff3333;
+}
+
+.chart {
+    -fx-padding: -140px;
+
+}

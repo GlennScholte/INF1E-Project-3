@@ -1,40 +1,27 @@
 /*bar colors*/
-.default-color0.chart-bar { -fx-bar-fill: #5DF380; }
-.default-color1.chart-bar { -fx-bar-fill: #1760CE; }
+.default-color0.chart-bar { -fx-bar-fill: #990099; }
+.default-color1.chart-bar { -fx-bar-fill: #99c2ff; }
 
-.chart {
-    -fx-background-image: url("afbeeldingen/backgroundgrey3.jpg");
-    -fx-font-size: 20px;
+.button {
+    -fx-font-family: "Arial";
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
-    -fx-font-family: Arial;
+    -fx-background-color: linear-gradient(#e6e6e6, #ffffff);
+    -fx-font-style: oblique ;
 
 }
-.chart-legend {
-    -fx-background-color:  linear-gradient(grey,white);
-    -fx-padding: 10px;
-}
-.chart-legend-item{
-    -fx-text-fill: #191970;
+
+.button:hover {
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+    -fx-text-fill: #ff3333;
 }
 
-chart-plot-background {
-    -fx-background-color: #e2ecfe;
+.chart-legend{
+    -fx-font-weight: lighter;
 }
-.chart-vertical-grid-lines {
-    -fx-stroke: black;
-}
-.chart-horizontal-grid-lines {
-    -fx-stroke: black;
-}
-.chart-alternative-row-fill {
-    -fx-fill:linear-gradient(red,green);
-    -fx-stroke: black;
-    -fx-stroke-width: 2;
-}
+
 .root {
-    -fx-spacing: 20;
     -fx-text-fill: #ffffff;
-    -fx-font-style: oblique;
     -fx-font-size: 20px;
     -fx-font-family: Arial;
     -fx-font-weight: bold;

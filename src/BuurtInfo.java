@@ -28,7 +28,7 @@ public class BuurtInfo {
     public BuurtInfo(String naam, int aantalDiefstal, int aantalFietsboxen){
         this.naam = naam;
         this.aantalDiefstal = aantalDiefstal;
-        this.aantalFietsboxen= aantalFietsboxen;
+        this.aantalFietsboxen = aantalFietsboxen;
     }
 
     public int getAantalFietsboxen() {

@@ -1,58 +1,40 @@
+.check-box{
+    -fx-text-fill:#ffffff;}
+
 .chart{
     -fx-bar-gap: 5;
     -fx-category-gap: 10;
     -fx-border-color: #e6e6e6;
     -fx-border-width: 5px;
-    -fx-background-image: url("../afbeeldingen/backgroundgrey.jpg");
-
 }
 
 .button {
     -fx-font-family: "Arial";
     -fx-font-size: 30px;
     -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#4F4F4F, #ffffff);
+    -fx-background-color: linear-gradient(#e6e6e6, #ffffff);
 }
 
 .button:hover {
-    -fx-background-color: linear-gradient(#626170, #ffffff);
-    -fx-text-fill: white;
-
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+    -fx-text-fill: #ff3333;
 }
 .root{
-    -fx-spacing: 20;
-    -fx-background-image: url("../afbeeldingen/backgroundgrey2.jpg");
-    -fx-text-fill: #ffffff;
+    -fx-background-image: url("../afbeeldingen/bikie.jpg");
+    -fx-text-fill: #fff444;
     -fx-font-style: oblique ;
     -fx-font-size: 20px;
     -fx-font-family: Arial;
     -fx-font-weight: bold;
-
-
 }
-
-
 
 .label {
     -fx-font-weight: bold;
-    -fx-font-size: 12px;
-
+    -fx-font-size: 120px;
     -fx-effect: inherit;
     -fx-text-fill: #333333;
-    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
 
-#fancytext {
-    -fx-font: 22px Tahoma;
-    -fx-fill: linear-gradient(#ffffff, #dbdbdb);
-    -fx-stroke: rgba(219, 219, 219, 0.1);
-    -fx-font-weight: bold;
-
-
-
-    -fx-font-family: fantasy;
-
-}
 
 

@@ -1,17 +1,18 @@
 import javafx.application.Application;
-        import javafx.collections.FXCollections;
-        import javafx.collections.ObservableList;
-        import javafx.scene.Group;
-        import javafx.scene.Scene;
-        import javafx.scene.chart.*;
-        import javafx.scene.control.Button;
-        import javafx.scene.control.CheckBox;
-        import javafx.scene.control.Label;
-        import javafx.scene.layout.StackPane;
-        import javafx.scene.paint.Color;
-        import javafx.stage.Stage;
-        import java.util.ArrayList;
-        import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.chart.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GUI extends Application {
     public static Stage window;
@@ -20,41 +21,58 @@ public class GUI extends Application {
 
     public void start(Stage primaryStage) {
         window = primaryStage;
+        window.setResizable(false);
 
         //Buttons back to Mainmenu
         Button buttonBackHoofdmenu1 = new Button("Back");
         buttonBackHoofdmenu1.setOnAction(e -> window.setScene(sceneHoofdmenu));
+        buttonBackHoofdmenu1.setTranslateY(-220);
 
         Button buttonBackHoofdmenu2 = new Button("Back");
         buttonBackHoofdmenu2.setOnAction(e -> window.setScene(sceneHoofdmenu));
+        buttonBackHoofdmenu2.setTranslateY(-220);
+
+        Button buttonBackHoofdmenu3 = new Button("Back");
+        buttonBackHoofdmenu3.setOnAction(e -> window.setScene(sceneHoofdmenu));
+        buttonBackHoofdmenu3.setTranslateY(100);
+        buttonBackHoofdmenu3.setTranslateX(540);
 
         //Button back to Selectiemenu
         Button buttonBackSelectieMenu1 = new Button("Back");
+        buttonBackSelectieMenu1.setTranslateY(310);
+        buttonBackSelectieMenu1.setTranslateX(-530);
 
         //Button back to Diagram selectiemenu
         Button buttonBackSelectieMenu2 = new Button("Back");
+        buttonBackSelectieMenu2.setTranslateY(640);
+        buttonBackSelectieMenu2.setLayoutX(10);
         buttonBackSelectieMenu2.setOnAction(e -> {
             window.setScene(sceneSelecteerDiagramData);
         });
 
         Button buttonBackSelectieMenu3 = new Button("Back");
+        buttonBackSelectieMenu3.setTranslateY(640);
+        buttonBackSelectieMenu3.setLayoutX(10);
         buttonBackSelectieMenu3.setOnAction(e -> {
             window.setScene(sceneSelecteerDiagramData);
         });
         //Button show Grafiek menu
         Button button1 = new Button("Grafiek");
         button1.setTranslateX(-100);
+        button1.setTranslateY(220);
         button1.setOnAction(e -> window.setScene(sceneSelecteerGrafiekData));
 
         //Button Show Diagram menu
         Button button2 = new Button("Diagram");
         button2.setTranslateX(100);
+        button2.setTranslateY(220);
         button2.setOnAction(e -> window.setScene(sceneSelecteerDiagramData));
 
         //Layout 1 - children laid out in vertical column
         StackPane layout1 = new StackPane();
         layout1.getChildren().addAll(button1, button2);
         sceneHoofdmenu = new Scene(layout1, 1200, 700);
+        sceneHoofdmenu.getStylesheets().add("stylesheets/StylesheetHoofdmenu.css");
 
         //Keuzemenu Grafiek
         CheckBox box1   = new CheckBox(BuurtInfo.Charlois.getNaam());
@@ -72,71 +90,81 @@ public class GUI extends Application {
         CheckBox box13  = new CheckBox(BuurtInfo.RotterdamCentrum.getNaam());
         CheckBox box14  = new CheckBox(BuurtInfo.Rozenburg.getNaam());
 
-        //X
-        box1.setTranslateX(-500);
-        box2.setTranslateX(-500);
-        box3.setTranslateX(-500);
+        //Linker rij
+        box1.setTranslateX(100);
+        box1.setTranslateY(120);
 
-        box4.setTranslateX(-400);
-        box5.setTranslateX(-400);
-        box6.setTranslateX(-400);
+        box2.setTranslateX(100);
+        box2.setTranslateY(130);
 
-        box7.setTranslateX(600);
-        box8.setTranslateX(600);
-        box9.setTranslateX(600);
+        box3.setTranslateX(100);
+        box3.setTranslateY(140);
+
+        box4.setTranslateX(100);
+        box4.setTranslateY(150);
+
+        box5.setTranslateX(100);
+        box5.setTranslateY(160);
+
+        box6.setTranslateX(100);
+        box6.setTranslateY(170);
+
+        box7.setTranslateX(100);
+        box7.setTranslateY(180);
+
+        //Rechter rij
+        box8.setTranslateX(900);
+        box8.setTranslateY(-75);
+
+        box9.setTranslateX(900);
+        box9.setTranslateY(-65);
 
         box10.setTranslateX(900);
+        box10.setTranslateY(-55);
+
         box11.setTranslateX(900);
+        box11.setTranslateY(-45);
+
         box12.setTranslateX(900);
+        box12.setTranslateY(-35);
 
-        //Y
-        box1.setTranslateY(50);
-        box2.setTranslateY(100);
-        box3.setTranslateY(150);
+        box13.setTranslateX(900);
+        box13.setTranslateY(-25);
 
-        box4.setTranslateY(50);
-        box5.setTranslateY(100);
-        box6.setTranslateY(150);
-
-        box7.setTranslateY(-45);
-        box8.setTranslateY(-45);
-        box9.setTranslateY(-45);
-
-        box10.setTranslateY(-190);
-        box11.setTranslateY(-190);
-        box12.setTranslateY(-190);
-
-        box1.setSelected(true);
-        box2.setSelected(true);
-        box3.setSelected(true);
+        box14.setTranslateX(900);
+        box14.setTranslateY(-15);
 
         //Button show Grafiek
         Button showGrafiekButton = new Button("Show Grafiek");
-        showGrafiekButton.setTranslateX(500);
-        showGrafiekButton.setTranslateY(200);
+        showGrafiekButton.setTranslateX(490);
+        showGrafiekButton.setTranslateY(492);
         showGrafiekButton.setOnAction(e -> {
-            GrafiekMenu.checkboxHandler(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
+            Checkboxhandler.checkboxHandler(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
         });
 
         //Button show diagram Diefstal
         Button buttonShowDiagramDiefstal = new Button("Diefstal");
         buttonShowDiagramDiefstal.setTranslateX(-100);
+        buttonShowDiagramDiefstal.setTranslateY(220);
         buttonShowDiagramDiefstal.setOnAction(e -> window.setScene(sceneDiagramDiefstal));
 
         //Button show diagram Fietsboxen
         Button buttonShowDiagramFietsboxen = new Button("Fietsboxen");
         buttonShowDiagramFietsboxen.setTranslateX(100);
+        buttonShowDiagramFietsboxen.setTranslateY(220);
         buttonShowDiagramFietsboxen.setOnAction(e -> window.setScene(sceneDiagramFietsboxen));
 
         //Layout Selectiemenu Grafiek
-        StackPane layoutSelectieMenuGrafiek = new StackPane();
-        layoutSelectieMenuGrafiek.getChildren().addAll(buttonBackHoofdmenu1, showGrafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
+        VBox layoutSelectieMenuGrafiek = new VBox(0);
+        layoutSelectieMenuGrafiek.getChildren().addAll(buttonBackHoofdmenu3, showGrafiekButton, box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
         sceneSelecteerGrafiekData = new Scene(layoutSelectieMenuGrafiek, 1200, 700);
+        sceneSelecteerGrafiekData.getStylesheets().add("stylesheets/StylesheetHoofdmenu.css");
 
         //Layout Selectiemenu Diagram
         StackPane layoutSelectieMenuDiagram = new StackPane();
         layoutSelectieMenuDiagram.getChildren().addAll(buttonBackHoofdmenu2, buttonShowDiagramDiefstal, buttonShowDiagramFietsboxen);
         sceneSelecteerDiagramData = new Scene(layoutSelectieMenuDiagram, 1200, 700);
+        sceneSelecteerDiagramData.getStylesheets().add("stylesheets/StylesheetHoofdmenu.css");
 
         //Diagram Diefstal
         sceneDiagramDiefstal = new Scene(new Group(), 1200, 700);
@@ -197,6 +225,10 @@ public class GUI extends Application {
         chartFietsboxen.setTitle("Diefstal in de 14 buurten van Rotterdam");
         chartFietsboxen.setTranslateY(150);
         chartFietsboxen.setTranslateX(350);
+        chartFietsboxen.setScaleX(1);
+        chartFietsboxen.setScaleY(1);
+        chartFietsboxen.setLayoutX(1);
+        chartFietsboxen.setLayoutY(1);
 
         final Label captionFietsboxen = new Label("");
         captionFietsboxen.setTextFill(Color.WHITE);
@@ -222,10 +254,11 @@ public class GUI extends Application {
         StackPane layout3 = new StackPane();
         layout3.getChildren().addAll(barChart, buttonBackSelectieMenu1);
         sceneGrafiek = new Scene(layout3, 1200, 700);
+        sceneGrafiek.getStylesheets().add("stylesheets/StylesheetGrafiek.css");
 
         //Button Show Grafiek - Action
         showGrafiekButton.setOnAction(e -> {
-            GrafiekMenu.checkboxHandler(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
+            Checkboxhandler.checkboxHandler(box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14);
             for (BuurtInfo buurt : selected) {
                 diefstal.getData().add(new XYChart.Data(buurt.getNaam(), buurt.getAantalDiefstal()));
                 fietsboxen.getData().add(new XYChart.Data(buurt.getNaam(), buurt.getAantalFietsboxen()));
@@ -244,7 +277,7 @@ public class GUI extends Application {
 
         //Display hoofdmenu at first
         window.setScene(sceneHoofdmenu);
-        window.setTitle("Title Here");
+        window.setTitle("");
         window.show();
     }
 }

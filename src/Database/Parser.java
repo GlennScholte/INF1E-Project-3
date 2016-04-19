@@ -1,3 +1,5 @@
+package Database;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.sql.Connection;
@@ -11,7 +13,7 @@ public class Parser {
 
     public static void OpenDatabase() {
         try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dieffiets", "postgres", "rainbowbrony1");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "guus2009");
             stmnt = con.createStatement();
         } catch (Exception exc) {
             exc.printStackTrace();
