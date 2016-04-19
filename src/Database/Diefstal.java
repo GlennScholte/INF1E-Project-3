@@ -7,28 +7,17 @@ import java.sql.Statement;
 
 public class Diefstal {
 
-    private static Connection con;
-    private static Statement stmnt;
-
-    public static void OpenDatabase() {
-        try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dieffiets", "postgres", "rainbowbrony1");
-            stmnt = con.createStatement();
-        } catch (Exception exc) {
-            exc.printStackTrace();
-        }
-    }
-
     public static int getNumber(String SQL) {
         int res = 0;
         try {
-            OpenDatabase();
+            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "m1sterx3");
+            Statement stmnt = con.createStatement();
             ResultSet rs = stmnt.executeQuery(SQL);
             while (rs.next()) {
                 res = Integer.parseInt(rs.getString("count"));
             }
-            con.close();
-        } catch (Exception exc) {
+        }
+        catch (Exception exc) {
             exc.printStackTrace();
         }
         return res;
