@@ -25,6 +25,23 @@ public class BuurtInfo {
     static BuurtInfo PrinsAlexander =           new BuurtInfo("Prins Alexander", Diefstal.getPrinsalex()/10, Fietstrommel.getPrinsalex());
     static BuurtInfo Rozenburg =                new BuurtInfo("Rozenburg", Diefstal.getRozenburg()/10, Fietstrommel.getRozenburg());
 
+    public static void update() {
+        RotterdamCentrum =         new BuurtInfo("Rotterdam Centrum", Diefstal.getCentrum()/10, Fietstrommel.getCentrum());
+        Charlois =                 new BuurtInfo("Charlois", Diefstal.getCharlois()/10, Fietstrommel.getCharlois());
+        Pernis =                   new BuurtInfo("Pernis", Diefstal.getPernis()/10, Fietstrommel.getPernis());
+        Delfshaven =               new BuurtInfo("Delfshaven", Diefstal.getDelfshaven()/10, Fietstrommel.getDelfshaven());
+        Feijenoord =               new BuurtInfo("Feijenoord", Diefstal.getFeijenoord()/10, Fietstrommel.getFeijenoord());
+        HillegersbergSchiebroek =  new BuurtInfo("Hillegersberg / Schiebroek", Diefstal.getHilSchie()/10, Fietstrommel.getHilSchie());
+        HoekVanHolland =           new BuurtInfo("Hoek van Holland", Diefstal.getHoekvHolland()/10, Fietstrommel.getHoekvHolland());
+        Hoogvliet =                new BuurtInfo("Hoogvliet", Diefstal.getHoogvliet()/10, Fietstrommel.getHoogvliet());
+        IJsselmonde =              new BuurtInfo("IJsselmonde", Diefstal.getIjsselmonde()/10, Fietstrommel.getIjsselmonde());
+        KralingenCrooswijk =       new BuurtInfo("Kralingen / Crooswijk", Diefstal.getKralCroos()/10, Fietstrommel.getKralCroos());
+        Noord =                    new BuurtInfo("Noord", Diefstal.getNoord()/10, Fietstrommel.getNoord());
+        Overschie =                new BuurtInfo("Overschie", Diefstal.getOverschie()/10, Fietstrommel.getOverschie());
+        PrinsAlexander =           new BuurtInfo("Prins Alexander", Diefstal.getPrinsalex()/10, Fietstrommel.getPrinsalex());
+        Rozenburg =                new BuurtInfo("Rozenburg", Diefstal.getRozenburg()/10, Fietstrommel.getRozenburg());
+    }
+
     public BuurtInfo(String naam, int aantalDiefstal, int aantalFietsboxen){
         this.naam = naam;
         this.aantalDiefstal = aantalDiefstal;

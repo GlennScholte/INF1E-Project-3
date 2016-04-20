@@ -12,7 +12,7 @@ public class Diefstal {
 
     public static void OpenDatabase() {
         try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "guus2009");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "rainbowbrony1");
             stmnt = con.createStatement();
         } catch (Exception exc) {
             exc.printStackTrace();

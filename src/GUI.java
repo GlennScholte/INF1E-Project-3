@@ -1,3 +1,4 @@
+import Database.Parser;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,16 @@ public class GUI extends Application {
     public void start(Stage primaryStage) {
         window = primaryStage;
         window.setResizable(false);
+
+        //Button parser
+        Button buttonParser = new Button("Parser");
+        buttonParser.setOnAction(e -> {
+            Parser.OpenDatabase();
+            Parser.ParseTrommels("C:/Users/ThatMetalCoreBrony/Desktop/trommels.csv");
+            BuurtInfo.update();
+                });
+
+        buttonParser.setTranslateY(-220);
 
         //Buttons back to Mainmenu
         Button buttonBackHoofdmenu1 = new Button("Back");
@@ -71,7 +82,7 @@ public class GUI extends Application {
 
         //Layout 1 - children laid out in vertical column
         StackPane layout1 = new StackPane();
-        layout1.getChildren().addAll(button1, button2);
+        layout1.getChildren().addAll(button1, button2, buttonParser);
         sceneHoofdmenu = new Scene(layout1, 1200, 700);
         sceneHoofdmenu.getStylesheets().add("stylesheets/StylesheetHoofdmenu.css");
 
@@ -189,7 +200,7 @@ public class GUI extends Application {
         );
 
         final PieChart chartDiefstal = new PieChart(pieChartDataDiefstal);
-        chartDiefstal.setTitle("Diefstal in de 14 buurten van Rotterdam");
+        chartDiefstal.setTitle("Fietsdiefstal in de 14 buurten van Rotterdam");
         chartDiefstal.setTranslateY(150);
         chartDiefstal.setTranslateX(350);
 
@@ -223,7 +234,7 @@ public class GUI extends Application {
         );
 
         final PieChart chartFietsboxen = new PieChart(pieChartDataFietsboxen);
-        chartFietsboxen.setTitle("Diefstal in de 14 buurten van Rotterdam");
+        chartFietsboxen.setTitle("Fietstrommels in de 14 buurten van Rotterdam");
         chartFietsboxen.setTranslateY(150);
         chartFietsboxen.setTranslateX(350);
         chartFietsboxen.setScaleX(1);

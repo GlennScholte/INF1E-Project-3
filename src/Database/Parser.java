@@ -13,7 +13,7 @@ public class Parser {
 
     public static void OpenDatabase() {
         try {
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "guus2009");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Fietsdief", "postgres", "rainbowbrony1");
             stmnt = con.createStatement();
         } catch (Exception exc) {
             exc.printStackTrace();
@@ -43,7 +43,6 @@ public class Parser {
                 String sql = "INSERT INTO "+ tablename + " VALUES("
                         + values +
                         ");";
-                System.out.println(sql);
                 try {
                     stmnt.executeUpdate(sql);
                 } catch (Exception e) {
