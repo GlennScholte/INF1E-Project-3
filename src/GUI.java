@@ -30,12 +30,13 @@ public class GUI extends Application {
 
         Button buttonBackHoofdmenu2 = new Button("Back");
         buttonBackHoofdmenu2.setOnAction(e -> window.setScene(sceneHoofdmenu));
-        buttonBackHoofdmenu2.setTranslateY(-220);
+        buttonBackHoofdmenu2.setTranslateY(310);
+        buttonBackHoofdmenu2.setTranslateX(-530);
 
         Button buttonBackHoofdmenu3 = new Button("Back");
         buttonBackHoofdmenu3.setOnAction(e -> window.setScene(sceneHoofdmenu));
-        buttonBackHoofdmenu3.setTranslateY(100);
-        buttonBackHoofdmenu3.setTranslateX(540);
+        buttonBackHoofdmenu3.setTranslateY(630);
+        buttonBackHoofdmenu3.setTranslateX(10);
 
         //Button back to Selectiemenu
         Button buttonBackSelectieMenu1 = new Button("Back");
@@ -246,7 +247,7 @@ public class GUI extends Application {
         xAxis.setLabel("Buurt");
         yAxis.setLabel("Aantal");
         XYChart.Series diefstal = new XYChart.Series();
-        diefstal.setName("Diefstal");
+        diefstal.setName("Diefstal ×10");
         XYChart.Series fietsboxen = new XYChart.Series();
         fietsboxen.setName("Fietsboxen");
         barChart.getData().addAll(diefstal, fietsboxen);
